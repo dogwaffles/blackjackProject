@@ -13,11 +13,35 @@ class Card:
         card.cardFace = cardFace #str - A, 2-10, J, Q, K
         card.cardSuit = cardSuit #str - spades, hearts, diamonds, clubs
 
+#cardlist
+#may be useful
+
+aceVal = 1
+
+card_dict = {
+    0: {"cardName":"Joker", "cardVal":0},
+    1: {"cardName":"Ace", "cardVal":aceVal},
+    2: {"cardName":"Two", "cardVal":2},
+    3: {"cardName":"Three", "cardVal":3},
+    4: {"cardName":"Four", "cardVal":4},
+    5: {"cardName":"Five", "cardVal":5},
+    6: {"cardName":"Six", "cardVal":6},
+    7: {"cardName":"Seven", "cardVal":7},
+    8: {"cardName":"Eight", "cardVal":8},
+    9: {"cardName":"Nine", "cardVal":9},
+    10: {"cardName":"Ten", "cardVal":10},
+    11: {"cardName":"Jack", "cardVal":10},
+    12: {"cardName":"Queen", "cardVal":10},
+    13: {"cardName":"King", "cardVal":10}
+}
+
+for index, card in card_dict.items():
+    print(card["cardName"] + " : " + str(card["cardVal"]))
+
     # fn PRINTCARD uses print.cardFace and print.cardSuit
     # to print a card string for player display
-    # (I tried making another  function to insert into this function, but I recieved that NoneType error...)
-    # there is probably a more elegant way to handle this if
-    # if not any([]) produces false if any statement in the iterable returns true
+    # there is probably a more elegant way to handle this series of ifs
+    # if not any([]) produces false if any statement in the iterable returns true:
     # (skipping the error > exit())
     # local
     # Uses class reference when called ie card.checkCard()
@@ -32,7 +56,9 @@ class Card:
             print("Error in PrintCard.py at ", cf, ". \n Ending program") ; exit()
         else:
             print(card.cardFace + card.cardSuit)
-
+    # PRINTCARD
+    # recieves a card, transforms that card into a graphic, based on its card.cardSuit
+    # runs card.checkCard to check validity of entry and prints the cardSuit and cardFace
     def PrintCard(card):
         if card.cardSuit == "spades":
             card.cardSuit = "\u2660" #ascii graphics, tested well

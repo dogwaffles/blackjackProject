@@ -3,6 +3,9 @@
 > -I also installed VS Code and got git pushes working from console.\
 > -Implemented a big fix in the card printer (faulty logic in comparison operators). Cleaned up comments. Reorganized README.
  
+ # June 1:
+ > -Today, I aim to create a deck builder and deal function (morning) and then create dealer and player action (evening).
+ > -If I have extra time, I will split up the classCard functions into single-purpose functions, for practice.
 
 
 
