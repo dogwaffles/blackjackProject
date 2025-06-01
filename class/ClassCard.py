@@ -13,30 +13,38 @@ class Card:
         card.cardFace = cardFace #str - A, 2-10, J, Q, K
         card.cardSuit = cardSuit #str - spades, hearts, diamonds, clubs
 
-#cardlist
-#may be useful
+    #needs refactoring
+    #cardlist
+    #FIXME
+    aceVal = 1
 
-aceVal = 1
+    # cardList = [
+    #     Card(aceVal, "A", "spades"),
+    #     Card(2, "2", "spades"),
+    #     Card(3, "3", "spades"),
+    #     Card(4, "4", "spades"),
+    #     Card(5, "5", "spades"),
+    #     Card(6, "6", "spades"),
+    #     Card(7, "7", "spades"),
+    #     Card(8, "8", "spades"),
+    #     Card(9, "9", "spades"),
+    #     Card(10, "10", "spades"),
+    #     Card(10, "jack", "spades"),
+    #     Card(10, "queen", "spades"),
+    #     Card(10, "king", "spades")]
 
-card_dict = {
-    0: {"cardName":"Joker", "cardVal":0},
-    1: {"cardName":"Ace", "cardVal":aceVal},
-    2: {"cardName":"Two", "cardVal":2},
-    3: {"cardName":"Three", "cardVal":3},
-    4: {"cardName":"Four", "cardVal":4},
-    5: {"cardName":"Five", "cardVal":5},
-    6: {"cardName":"Six", "cardVal":6},
-    7: {"cardName":"Seven", "cardVal":7},
-    8: {"cardName":"Eight", "cardVal":8},
-    9: {"cardName":"Nine", "cardVal":9},
-    10: {"cardName":"Ten", "cardVal":10},
-    11: {"cardName":"Jack", "cardVal":10},
-    12: {"cardName":"Queen", "cardVal":10},
-    13: {"cardName":"King", "cardVal":10}
-}
+    #values for card .cardVal .cardFace .cardSuit
+    # cardVals = [aceVal,2,3,4,5,6,7,8,9,10,10,10,10]
+    # cardFaces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+    # cardSuits = ["spades", "hearts", "diamonds", "clubs"]
 
-for index, card in card_dict.items():
-    print(card["cardName"] + " : " + str(card["cardVal"]))
+    # for suit in cardSuits:
+    #     for i in cardVals:
+    #         print(Card(cardVals[i], cardFaces[i], cardSuits[suit]))
+
+    #test loop to check card values, use existing functions, nested FOR loop
+# for index, card in cardList.items():
+#     print(card.cardFace) # + " : " + str(card["cardVal"]))
 
     # fn PRINTCARD uses print.cardFace and print.cardSuit
     # to print a card string for player display
@@ -51,7 +59,6 @@ for index, card in card_dict.items():
             (card.cardSuit == "\u2665"),
             (card.cardSuit == "\u2666"),
             (card.cardSuit == "\u2663") ]):
-            # error handling with debug information, cf is currentframe() from inspect library
             # triggers if none of the cardSuit ascii symbols are present in the card
             print("Error in PrintCard.py at ", cf, ". \n Ending program") ; exit()
         else:
@@ -72,10 +79,31 @@ for index, card in card_dict.items():
         # NOT checkCard(card) 
         card.checkCard()
 
+
+# DECK_GENERATE
+#GENERATES A DECK, ITERATING THROUGH ALL SUITS, FACES, AND VALUES
+
+    def deckGenerate():
+        aceVal = 1
+        cardVals = [aceVal,2,3,4,5,6,7,8,9,10,10,10,10]
+        cardFaces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+        cardSuits = ["spades", "hearts", "diamonds", "clubs"]
+        for suitsIndex in range(len(cardSuits)):
+            for facesIndex in range(len(cardFaces)):
+                print(cardVals[facesIndex], cardFaces[facesIndex], cardSuits[suitsIndex])
+ 
+    deckGenerate()
+ 
+    #test loop to check card values, use existing functions, nested FOR loop
+    # for i in range(len(cardFaces)):
+    #     # testCa
+    #     print(cardFaces[i]) # + " : " + str(card["cardVal"]))
 # class Card takes 3 values but returns 4 (self)
 # self.cardVal = 7, self.cardFace = "7", etc.
 #DEL
 card1 = Card(7, "7", "spades")
 
+
+
 # test function call #DEL
-card1.PrintCard()
+# card1.PrintCard()

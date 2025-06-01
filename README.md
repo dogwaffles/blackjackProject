@@ -4,8 +4,10 @@
 > -Implemented a big fix in the card printer (faulty logic in comparison operators). Cleaned up comments. Reorganized README.
  
  # June 1:
- > -Today, I aim to create a deck builder and deal function (morning) and then create dealer and player action (evening).
- > -If I have extra time, I will split up the classCard functions into single-purpose functions, for practice.
+ > -Today, I aim to create a deck builder and deal function (morning) and then create dealer and player action (evening).\
+  If I have extra time, I will split up the classCard functions into single-purpose functions, for practice.
+> -I did make a deck generate function; generates all card values, face, I settled on nested for loops iterating over lists.\
+Later I will stick to a deal function and continue planning.
 
 
 
