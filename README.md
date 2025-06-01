@@ -29,7 +29,8 @@ Later I will stick to a deal function and continue planning.
         user_hand, dealer_hand, win/loss(current_session), win/loss(all_time), etc.
         -Functions shuffling, dealing, player actions, exporting to user data file
         -If/Else statements dealer behavior (hit/stand) is programmatic. 
-        There is also dynamic actions based on user's current hand. (Split, 5-card, Ace value,...)
+        There is also dynamic actions based on user's current hand. 
+        (Split, 5-card, Ace value,...)
         -Loops Shuffling, dealing, player action, updating output data
     “One New Thing”: initially I will import class definitions to keep things clean, 
     and use Pandas to create data tables
@@ -39,7 +40,7 @@ Later I will stick to a deal function and continue planning.
     one in the afternoon after a short nap. 
         -One week for basic program functionality (including classes and Pandas data tables)
         -One week for 'extras' (bot plays, graphics, etc.)
-    Team or Individual: Individual\\
+    Team or Individual: Individual
 
     *Please note that while blackjack is not the most moral of pursuits, 
     it can be an enjoyable diversion that is winnable with skill and presence. 
