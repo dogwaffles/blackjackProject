@@ -20,7 +20,8 @@ Later I will stick to a deal function and continue planning.
         (which is programmatic), and player (H)it (S)tand (D)ouble and (S)plit.
         -It will have several difficulty parameters including 
         (number of decks) and (% of cards removed from dealer stack)
-        -It will also keep track of player statistics, creating a user file based on name entered by user input
+        -It will also keep track of player statistics,
+         creating a user file based on name entered by user input
         -This will be useful for blackjack practice - 
         keeping track of win/loss statistics is helpful in improving one's game.
     Key Features: Outline how you plan to use:
@@ -38,8 +39,9 @@ Later I will stick to a deal function and continue planning.
     one in the afternoon after a short nap. 
         -One week for basic program functionality (including classes and Pandas data tables)
         -One week for 'extras' (bot plays, graphics, etc.)
-    Team or Individual: Individual
-    *Please note that while blackjack is not the most moral of pursuits, 
-    it can be an enjoyable diversion that is winnable with skill and presence. I understand that any gambling game can be problematic, so
+    Team or Individual: Individual\\
 
+    *Please note that while blackjack is not the most moral of pursuits, 
+    it can be an enjoyable diversion that is winnable with skill and presence. 
+    I understand that any gambling game can be problematic, so
     if you feel that you have a problem - please reach out. there is help out there.
