@@ -1,4 +1,14 @@
 
+# MAY 31
+>Developed a class for card, with a function to display string data indicating suit (ascii graphic) and card face. It's unfinished, but debugged and cleaned up. I still havve to add a dictionary-type object with the card names and values, as well as a way to produce a full deck as an array.\
+>I also installed VS Code and got git pushes working from console.
+>Implemented a big fix in the card printer (faulty logic in comparison operators). Cleaned up comments. Reorganized README.
+ 
+
+
+
+
+
     Project Title: Louis Reilly's Blackjack Trainer
     Objective: Its basic functionality is to realistically simulate games of blackjack, using random.seed(x) and random.random() for deal behavior.
         It will feature full casino rules, including dealer behavior (which is programmatic), and player (H)it (S)tand (D)ouble and (S)plit.
@@ -19,11 +29,3 @@
     *Please note that while blackjack is not the most moral of pursuits, it can be an enjoyable diversion that is winnable with skill and presence. I understand that any gambling game can be problematic, so
 
     if you feel that you have a problem - please reach out. there is help out there.
-
-MAY 31 -
--Developed a class for card, with a function to display string data indicating suit (ascii graphic) and card face. It's unfinished, but debugged and cleaned up. I still havve to add a dictionary-type object with the card names and values, as well as a way to produce a full deck as an array.\
--I also installed VS Code and got git pushes working from console.
- 
-
-
-
