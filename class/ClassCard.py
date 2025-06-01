@@ -13,11 +13,26 @@ class Card:
         card.cardFace = cardFace #str - A, 2-10, J, Q, K
         card.cardSuit = cardSuit #str - spades, hearts, diamonds, clubs
 
+    # fn PRINTCARD uses print.cardFace and print.cardSuit
+    # to print a card string for player display
+    # (I tried making another  function to insert into this function, but I recieved that NoneType error...)
+    # there is probably a more elegant way to handle this if
+    # if not any([]) produces false if any statement in the iterable returns true
+    # (skipping the error > exit())
+    # local
+    # Uses class reference when called ie card.checkCard()
+    def checkCard(card):
+        if not any([
+            (card.cardSuit == "\u2660"),
+            (card.cardSuit == "\u2665"),
+            (card.cardSuit == "\u2666"),
+            (card.cardSuit == "\u2663") ]):
+            # error handling with debug information, cf is currentframe() from inspect library
+            # triggers if none of the cardSuit ascii symbols are present in the card
+            print("Error in PrintCard.py at ", cf, ". \n Ending program") ; exit()
+        else:
+            print(card.cardFace + card.cardSuit)
 
-# fn PRINTCARD uses print.cardFace and print.cardSuit
-# to print a card string for player display
-# (I tried making another  function to insert into this function, but I recieved that NoneType error...)
-# (... which I guess is some kind of scope error. This is a good result for my first session.)
     def PrintCard(card):
         if card.cardSuit == "spades":
             card.cardSuit = "\u2660" #ascii graphics, tested well
@@ -27,25 +42,14 @@ class Card:
             card.cardSuit = "\u2666"
         if card.cardSuit == "clubs":
             card.cardSuit = "\u2663"
-        #print(card.cardSuit) #DEL
-        # there is probably a more elegant way to handle this if
-        # if not any([]) produces false if any statement in the iterable returns true
-        # if not any(thisSuit):
-        
-        if not any([ (card.cardSuit == "\u2660"),
-                    (card.cardSuit == "\u2665"),
-                    (card.cardSuit == "\u2666"),
-                    (card.cardSuit == "\u2663") ]):
-            # error handling with debug information, cf is currentframe() from inspect library
-            # triggers if none of the cardSuit ascii symbols are present in the card
-            print("Error in PrintCard.py at ", cf, ". \n Ending program") ; exit()
-        else:
-            print(card.cardFace + card.cardSuit)
+        # fixed: function call here is with class reference
+        # NOT checkCard(card) 
+        card.checkCard()
 
 # class Card takes 3 values but returns 4 (self)
 # self.cardVal = 7, self.cardFace = "7", etc.
 #DEL
-card1 = Card(7, "7", "afds")
+card1 = Card(7, "7", "spades")
 
 # test function call #DEL
 card1.PrintCard()
