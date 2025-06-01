@@ -1,8 +1,14 @@
 
 # MAY 31
+<<<<<<< HEAD
 > -Developed a class for card, with a function to display string data indicating suit (ascii graphic) and card face. It's unfinished, but debugged and cleaned up. I still havve to add a dictionary-type object with the card names and values, as well as a way to produce a full deck as an array.\
 > -I also installed VS Code and got git pushes working from console.\
 > -Implemented a big fix in the card printer (faulty logic in comparison operators). Cleaned up comments. Reorganized README.
+=======
+>Developed a class for card, with a function to display string data indicating suit (ascii graphic) and card face. It's unfinished, but debugged and cleaned up. I still havve to add a dictionary-type object with the card names and values, as well as a way to produce a full deck as an array.\
+>I also installed VS Code and got git pushes working from console.
+>Implemented a big fix in the card printer (faulty logic in comparison operators). Cleaned up comments. Reorganized README.
+>>>>>>> origin/main
  
 
 
