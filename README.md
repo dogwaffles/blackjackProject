@@ -16,14 +16,14 @@
         One week for basic program functionality (including classes and Pandas data tables)
         One week for 'extras' (bot plays, graphics, etc.)
     Team or Individual: Individual
+    *Please note that while blackjack is not the most moral of pursuits, it can be an enjoyable diversion that is winnable with skill and presence. I understand that any gambling game can be problematic, so
 
- 
-
-*Please note that while blackjack is not the most moral of pursuits, it can be an enjoyable diversion that is winnable with skill and presence. I understand that any gambling game can be problematic, so
-
-if you feel that you have a problem - please reach out. there is help out there.
-
+    if you feel that you have a problem - please reach out. there is help out there.
 
 MAY 31 -
--Developed a class for card, with a function to display string data indicating suit (ascii graphic) and card face. It's unfinished, but debugged and cleaned up. I still havve to add a dictionary-type object with the card names and values, as well as a way to produce a full deck as an array.
+-Developed a class for card, with a function to display string data indicating suit (ascii graphic) and card face. It's unfinished, but debugged and cleaned up. I still havve to add a dictionary-type object with the card names and values, as well as a way to produce a full deck as an array.\
 -I also installed VS Code and got git pushes working from console.
+ 
+
+
+
