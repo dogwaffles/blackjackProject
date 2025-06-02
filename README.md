@@ -9,7 +9,10 @@
 > -I did make a deck generate function; generates all card values, faces, and suits. I settled on nested for loops iterating over lists.\
 Later I will stick to a deal function and continue planning.
 > -(Evening) classes are being a bit trickier than expected, but I'm making progress...\
-
+> -2 hours, I've got classes for Stack and Deal, both working. Stack can create multiple\
+decks in a stack, with class card in a single list. Deal randomizes the stack (this could\
+be made into a new class, I may do that to warm up tomorrow) Deals 2 cards from top of stack\
+to both player and dealer. I'm satisfied for tonight's progress.
 
 
 
