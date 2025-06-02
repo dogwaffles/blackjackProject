@@ -1,4 +1,4 @@
-# currentframe()
+k# currentframe()
 # for use in dynamic error reporting :)
 from inspect import currentframe
 
@@ -83,16 +83,16 @@ class Card:
 # DECK_GENERATE
 #GENERATES A DECK, ITERATING THROUGH ALL SUITS, FACES, AND VALUES
 
-    def deckGenerate():
-        aceVal = 1
-        cardVals = [aceVal,2,3,4,5,6,7,8,9,10,10,10,10]
-        cardFaces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
-        cardSuits = ["spades", "hearts", "diamonds", "clubs"]
-        for suitsIndex in range(len(cardSuits)):
-            for facesIndex in range(len(cardFaces)):
-                print(cardVals[facesIndex], cardFaces[facesIndex], cardSuits[suitsIndex])
+    # def deckMake():
+    #     aceVal = 1
+    #     cardVals = [aceVal,2,3,4,5,6,7,8,9,10,10,10,10]
+    #     cardFaces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+    #     cardSuits = ["spades", "hearts", "diamonds", "clubs"]
+    #     for suitsIndex in range(len(cardSuits)):
+    #         for facesIndex in range(len(cardFaces)):
+    #             print(cardVals[facesIndex], cardFaces[facesIndex], cardSuits[suitsIndex])
  
-    deckGenerate()
+    # deckMake()
  
     #test loop to check card values, use existing functions, nested FOR loop
     # for i in range(len(cardFaces)):
