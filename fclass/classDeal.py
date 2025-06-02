@@ -16,21 +16,25 @@ class makeDeal:
     # newDeal
     # returns new hands for player and dealer (2 cards apiece)
     # reads and removes from dealerStack
-    def newDeal():
-        playerCards = 2
+    def dealerDeal():
         dealerCards = 2
-        while playerCards > 0:
-            newCard = dealerStack.pop(0)
-            playerHand.append(newCard)
-            playerCards -= 1
         while dealerCards > 0:
             newCard = dealerStack.pop(0)
             dealerHand.append(newCard)
             dealerCards -= 1
-            
-    newDeal() 
-    print("Player hand:",playerHand)
-    print("Dealer hand:",dealerHand)
+        return (dealerHand)
+    
+    def playerDeal():
+        playerCards = 2
+        while playerCards > 0:
+            newCard = dealerStack.pop(0)
+            playerHand.append(newCard)
+            playerCards -= 1
+        return (playerHand)
+    # print(newDeal())
+    # newDeal() 
+    # print("Player hand:",playerHand)
+    # print("Dealer hand:",dealerHand)
     
     
     

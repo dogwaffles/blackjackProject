@@ -1,4 +1,4 @@
-from ClassCard import Card
+from classCard import Card
 
 # general functions
 
