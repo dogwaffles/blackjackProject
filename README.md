@@ -7,12 +7,14 @@
  > -Today, I aim to create a deck builder and deal function (morning) and then create dealer and player action (evening).\
   If I have extra time, I will split up the classCard functions into single-purpose functions, for practice.\
 > -I did make a deck generate function; generates all card values, faces, and suits. I settled on nested for loops iterating over lists.\
-Later I will stick to a deal function and continue planning.
+Later I will stick to a deal function and continue planning.\
 > -(Evening) classes are being a bit trickier than expected, but I'm making progress...\
 > -2 hours, I've got classes for Stack and Deal, both working. Stack can create multiple\
 decks in a stack, with class card in a single list. Deal randomizes the stack (this could\
 be made into a new class, I may do that to warm up tomorrow) Deals 2 cards from top of stack\
-to both player and dealer. I'm satisfied for tonight's progress.
+to both player and dealer. I'm satisfied for tonight's progress.  
+> -quick update I am going with Pandas instead of Tensorflow as I don't think I have a reasonable\
+chance of getting any results out of TF in the time frame.
 
 
 
