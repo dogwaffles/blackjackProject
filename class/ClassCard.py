@@ -1,4 +1,4 @@
-k# currentframe()
+# currentframe()
 # for use in dynamic error reporting :)
 from inspect import currentframe
 
@@ -83,14 +83,14 @@ class Card:
 # DECK_GENERATE
 #GENERATES A DECK, ITERATING THROUGH ALL SUITS, FACES, AND VALUES
 
-    # def deckMake():
-    #     aceVal = 1
-    #     cardVals = [aceVal,2,3,4,5,6,7,8,9,10,10,10,10]
-    #     cardFaces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
-    #     cardSuits = ["spades", "hearts", "diamonds", "clubs"]
-    #     for suitsIndex in range(len(cardSuits)):
-    #         for facesIndex in range(len(cardFaces)):
-    #             print(cardVals[facesIndex], cardFaces[facesIndex], cardSuits[suitsIndex])
+    def deckMake():
+        aceVal = 1
+        cardVals = [aceVal,2,3,4,5,6,7,8,9,10,10,10,10]
+        cardFaces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+        cardSuits = ["spades", "hearts", "diamonds", "clubs"]
+        for suitsIndex in range(len(cardSuits)):
+            for facesIndex in range(len(cardFaces)):
+                print(cardVals[facesIndex], cardFaces[facesIndex], cardSuits[suitsIndex])
  
     # deckMake()
  
@@ -101,9 +101,9 @@ class Card:
 # class Card takes 3 values but returns 4 (self)
 # self.cardVal = 7, self.cardFace = "7", etc.
 #DEL
-card1 = Card(7, "7", "spades")
+# card1 = Card(7, "7", "spades")
 
 
 
-# test function call #DEL
+# # test function call #DEL
 # card1.PrintCard()
