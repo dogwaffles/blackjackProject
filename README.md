@@ -16,7 +16,13 @@ to both player and dealer. I'm satisfied for tonight's progress.
 > -quick update I am going with Pandas instead of Tensorflow as I don't think I have a reasonable\
 chance of getting any results out of TF in the time frame.
 
-
+# June 2:
+> -I got some work done in the early AM - started on main.py to get basic functionality up and running.
+> -Prof told me to ease up - just get the requirements done - I am pushing myself because the brain is a muscle,  
+and this is the place to push myself, not the workplace.
+> -I am planning to do cleanup, commenting, and refactoring today: I've realized that transforming  
+class Card in main.py is unneccessary, it can & should be done in class Card.
+> -"No functions in main" -Okay
 
 
 # Project Overview:
