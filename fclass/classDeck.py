@@ -15,6 +15,11 @@ class Deck:
         return (decks * 52)
     
 
+    #FIXME DEAPOSTROPHIZER
+    #removes apostrophes from output of string in array->PRINTCARD
+    #may require relocating. [thanks, drunk me!]
+    #maybe output as !array
+
     # input array of class Card
     # output array of string for playspace
     def printCards(deck):

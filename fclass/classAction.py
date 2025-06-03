@@ -30,7 +30,7 @@ class Action:
     # call to return dealerHand (fresh deal)
     def dealerDeal():
         dealerHand = []
-        dealerCards = 5
+        dealerCards = 2
         while dealerCards > 0:
             newCard = dealerStack.pop(0)
             dealerHand.append(newCard)
