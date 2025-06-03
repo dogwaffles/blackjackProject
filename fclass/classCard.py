@@ -29,8 +29,8 @@ class Card:
 
     # PRINTCARD
     # inputs Card
-    # outputs [] string cardFace string cardSuit in play space
-    # transforming suit string into ascii symbol
+    # outputs str .cardFace str .cardSuit in playspace
+    # str .cardSuit is transformed into appropriate ascii symbol
     # calls exit() if suit check is invalid
     def PrintCard(card):
         # changes string .cardSuit into ascii character
