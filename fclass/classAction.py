@@ -3,9 +3,9 @@ from random import shuffle
 
 # print(dealerStack[0])
 
-class makeDeal:
+class Action:
     def __init__(deal, numCards):
-        makeDeal.numCards = numCards
+        Action.numCards = numCards
 
 
 
@@ -44,23 +44,4 @@ class makeDeal:
             playerHand.append(newCard)
             playerCards -= 1
         return (playerHand)
-    # print(newDeal())
-    # newDeal() 
-    # print("Player hand:",playerHand)
-    # print("Dealer hand:",dealerHand)
-    
-    
-    
-    
-    # dealerHand = []
-    # playerHand = []
-    # newStack = makeStack(1)
-
-
-    # def makeDeal(deckStack):
-    #     dealerStack = makeStack(1)
-    #     dealerNum = 2
-    #     playerNum = 2
-    #     while playerNum > 0:
-    #         newCard = dealerStack.pop(0)
-    #         print(newCard)
+   

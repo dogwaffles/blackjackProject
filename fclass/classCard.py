@@ -53,15 +53,3 @@ class Card:
             print("Error in PrintCard.py at ", cf, ". \n Ending program") ; exit()
         else:
             return (card.cardFace + card.cardSuit)
-
-
- 
-
-
-# TEST FUNCTIONS
-
-#DEL
-# card1 = Card(7, "7", "spades")
-
-# # test function call #DEL
-# print(card1.PrintCard())
