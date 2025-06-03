@@ -1,11 +1,7 @@
-from classStack import makeStack
+from ClassDeck import Deck
 from random import shuffle
 
-dealerStack = makeStack.makeDealerStack(1)
-shuffle(dealerStack)
 # print(dealerStack[0])
-playerHand = []
-dealerHand = []
 
 class makeDeal:
     def __init__(deal, numCards):
@@ -13,10 +9,26 @@ class makeDeal:
 
 
 
+    def makeDealerStack(numDecks):
+        deckStack = []
+        newDeck = Deck.deckMake()
+        while numDecks > 0:
+            # print(decks) #DEL
+            deckStack += newDeck
+            numDecks -= 1
+        return deckStack
+    
+
+
+
     # newDeal
     # returns new hands for player and dealer (2 cards apiece)
     # reads and removes from dealerStack
     def dealerDeal():
+        global dealerStack
+        dealerStack = makeDeal.makeDealerStack(1)
+        shuffle(dealerStack)
+        dealerHand = []
         dealerCards = 5
         while dealerCards > 0:
             newCard = dealerStack.pop(0)
@@ -26,6 +38,7 @@ class makeDeal:
     
     def playerDeal():
         playerCards = 2
+        playerHand = []
         while playerCards > 0:
             newCard = dealerStack.pop(0)
             playerHand.append(newCard)

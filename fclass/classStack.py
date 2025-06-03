@@ -1,19 +1,19 @@
-from ClassDeck import Deck
+# from ClassDeck import Deck
 
 
 
-class makeStack:
-    def __init__(deal, numDecks):
-        deal.numDecks = numDecks
+# class makeStack:
+#     def __init__(deal, numDecks):
+#         deal.numDecks = numDecks
 
-    def makeDealerStack(decks):
-        deckStack = []
-        newDeck = Deck.deckMake()
-        while decks > 0:
-            # print(decks) #DEL
-            deckStack += newDeck
-            decks -= 1
-        return deckStack
+    # def makeDealerStack(decks):
+    #     deckStack = []
+    #     newDeck = Deck.deckMake()
+    #     while decks > 0:
+    #         # print(decks) #DEL
+    #         deckStack += newDeck
+    #         decks -= 1
+    #     return deckStack
 
 
         

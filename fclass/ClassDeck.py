@@ -10,7 +10,6 @@ class Deck:
 
     # DECKMAKE
     # returns a full deck of 52 class Card
-    # .cardVal .cardFace .cardString
     def deckMake():
         # variables for function
         aceVal = 1 #placeHolder
@@ -26,7 +25,7 @@ class Deck:
         return newDeck
 
     #FIXME experimental, perhaps move to __str__ in class Card
-    def printStack(deck):
+    def printCards(deck):
         newDeck = []
         for card in deck:
             cardPrint = card.PrintCard()
@@ -34,7 +33,14 @@ class Deck:
             # print(cardPrint)
         print(newDeck)
 
-
+    # def makeDealerStack(decks):
+    #     deckStack = []
+    #     newDeck = Deck.deckMake()
+    #     while decks > 0:
+    #         # print(decks) #DEL
+    #         deckStack += newDeck
+    #         decks -= 1
+    #     return deckStack
 
 # newDeck = Deck(deckLength)
     
