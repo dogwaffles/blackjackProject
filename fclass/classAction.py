@@ -19,15 +19,15 @@ class makeDeal:
         return deckStack
     
 
+    global dealerStack
+    dealerStack = makeDealerStack(1)
+    shuffle(dealerStack)
 
 
     # newDeal
     # returns new hands for player and dealer (2 cards apiece)
     # reads and removes from dealerStack
     def dealerDeal():
-        global dealerStack
-        dealerStack = makeDeal.makeDealerStack(1)
-        shuffle(dealerStack)
         dealerHand = []
         dealerCards = 5
         while dealerCards > 0:

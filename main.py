@@ -3,7 +3,7 @@ import sys
 sys.path.insert(0, '/home/louis/Documents/programming/python/blackjackProject/fclass')
 
 import ast
-from classDeal import makeDeal
+from classAction import makeDeal
 from classCard import Card
 from ClassDeck import Deck
 

@@ -5,6 +5,9 @@ class Deck:
     def __init__(deck, deckLength):
         deck.deckLength = deckLength
     
+    global decks
+    decks = 1
+    
     def deckNum(decks):
         return (decks * 52)
 
