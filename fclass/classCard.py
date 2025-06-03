@@ -13,29 +13,12 @@ class Card:
         card.cardFace = cardFace #str - A, 2-10, J, Q, K
         card.cardSuit = cardSuit #str - spades, hearts, diamonds, clubs
 
-    # SUITTRANSFORM
-    # inputs Card {spades, hearts, diamonds, clubs}
-    # outputs appropriate string ascii symbol to represent suit in playspace
-    # def suitTransform(card):
-    #     if card.cardSuit == "spades":
-    #         card.cardSuit = "\u2660" #ascii graphics, tested well
-    #     if card.cardSuit == "hearts":
-    #         card.cardSuit = "\u2665"
-    #     if card.cardSuit == "diamonds":
-    #         card.cardSuit = "\u2666"
-    #     if card.cardSuit == "clubs":
-    #         card.cardSuit = "\u2663"
-    #     return card.cardsuit
-
-    # PRINTCARD
-    # inputs Card
-    # outputs str .cardFace str .cardSuit in playspace
-    # str .cardSuit is transformed into appropriate ascii symbol
-    # calls exit() if suit check is invalid
-    def PrintCard(card):
-        # changes string .cardSuit into ascii character
-        # I tried turning this into a helper function (and may return to it later)
-        #FIXME
+    # SUITTRANSFORM 
+    # helper function for PRINTCARD
+    # inputs Card 
+    # uses Card.cardSuit to determine new symbol
+    # returns appropriate string ascii symbol to represent suit in playspace
+    def suitTransform(card):
         if card.cardSuit == "spades":
             card.cardSuit = "\u2660" #ascii graphics, tested well
         if card.cardSuit == "hearts":
@@ -44,12 +27,34 @@ class Card:
             card.cardSuit = "\u2666"
         if card.cardSuit == "clubs":
             card.cardSuit = "\u2663"
-        # if a valid string is not present, exits program with error message
+        return card.cardSuit
+    
+    # SUITCHECK
+    # helper for PRINTCARD
+    # input str suit
+    # exits program if suit is outside of allowed
+    def suitCheck(suit):
         if not any([
-            (card.cardSuit == "\u2660"),
-            (card.cardSuit == "\u2665"),
-            (card.cardSuit == "\u2666"),
-            (card.cardSuit == "\u2663") ]):
-            print("Error in ClassCard.py at ", cf, " \n Ending program") ; exit()
-        else:
-            return (card.cardFace + card.cardSuit)
+            (suit == "\u2660"),
+            (suit == "\u2665"),
+            (suit == "\u2666"),
+            (suit == "\u2663") ]):
+            print("Error in ClassCard.py at ", cf, " \n Ending program") ; exit()       
+
+    # PRINTCARD
+    # inputs Card
+    # outputs str .cardFace str .cardSuit in playspace
+    # str .cardSuit is transformed into appropriate ascii symbol in SUITTRANSFORM
+    # calls exit() if suit check is invalid
+    def PrintCard(card):
+        # changes str .cardSuit into str ascii 'newSuit'
+        newSuit = Card.suitTransform(card)
+        # checks for validity of newSuit, exits otherwise
+        Card.suitCheck(newSuit)
+        # returns str data for playspace
+        # 
+        return (card.cardFace + card.cardSuit)
+
+card1 = Card(3, "3", "diamonds")
+print(Card.PrintCard(card1))
+print(card1.cardSuit)
