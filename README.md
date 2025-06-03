@@ -28,12 +28,11 @@ Comments are up-to-date. Final push shouldn't be too much of a hassle (jinx)...
 
 # June 3:
 > -Was up overnight. I've gotten a lot done. I think I'll sit around and work on ideas for moving forward, today.  
-'''
-FIXME DEAPOSTROPHIZER
-removes apostrophes from output of string in array->PRINTCARD
-may require relocating. [thanks, drunk me!]
-maybe output as !array
-'''
+        FIXME DEAPOSTROPHIZER
+        removes apostrophes from output of string in array->PRINTCARD
+        may require relocating. [thanks, drunk me!]
+        maybe output as !array
+        
 
 
 # Project Overview:
