@@ -38,10 +38,10 @@ class Deck:
         return newDeck
 
     # used in deckMake() DO NOT DELETE
+    global aceVal
     global cardVals
     global cardFaces
     global cardSuits
-    global aceVal
     aceVal = 1 #placeHolder
     cardVals = [aceVal,2,3,4,5,6,7,8,9,10,10,10,10]
     cardFaces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]

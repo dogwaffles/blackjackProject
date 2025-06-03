@@ -1,4 +1,4 @@
-from ClassDeck import Deck
+from classDeck import Deck
 from random import shuffle
 
 # print(dealerStack[0])

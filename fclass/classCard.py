@@ -52,9 +52,8 @@ class Card:
         # checks for validity of newSuit, exits otherwise
         Card.suitCheck(newSuit)
         # returns str data for playspace
-        # 
+        # NOTE: this will change the card global, but that shouldn't matter
         return (card.cardFace + card.cardSuit)
 
 card1 = Card(3, "3", "diamonds")
 print(Card.PrintCard(card1))
-print(card1.cardSuit)

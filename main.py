@@ -5,7 +5,7 @@ sys.path.insert(0, '/home/louis/Documents/programming/python/blackjackProject/fc
 
 from classAction import Action
 from classCard import Card
-from ClassDeck import Deck
+from classDeck import Deck
 
 
 #new hands dealt
@@ -21,6 +21,6 @@ printCards = Deck.printCards
 
 #TEST CASES
 
-print("Dealer has ",end=""), printCards(dealerCurrentHand)
+print("Dealer has: ",end=""), printCards(dealerCurrentHand)
 print("Player has: ",end=""), printCards(playerCurrentHand)
 
