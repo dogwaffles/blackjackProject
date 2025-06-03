@@ -8,7 +8,8 @@ class Action:
         Action.numCards = numCards
 
 
-
+    # input a number of decks
+    # outputs a stack of cards for the dealer to draw from
     def makeDealerStack(numDecks):
         deckStack = []
         newDeck = Deck.deckMake()
@@ -19,14 +20,14 @@ class Action:
         return deckStack
     
 
+    #global is useful here so functions can modify the dealerStack while dealing
     global dealerStack
     dealerStack = makeDealerStack(1)
     shuffle(dealerStack)
 
 
-    # newDeal
-    # returns new hands for player and dealer (2 cards apiece)
-    # reads and removes from dealerStack
+    # initial deal for dealer (2 cards into dealerHand)
+    # call to return dealerHand (fresh deal)
     def dealerDeal():
         dealerHand = []
         dealerCards = 5
@@ -36,6 +37,7 @@ class Action:
             dealerCards -= 1
         return (dealerHand)
     
+    # see below
     def playerDeal():
         playerCards = 2
         playerHand = []

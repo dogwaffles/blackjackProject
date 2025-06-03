@@ -1,18 +1,26 @@
 #thanks to geeksforgeeks.org
+#easy way to add seperate folder for imports
 import sys
 sys.path.insert(0, '/home/louis/Documents/programming/python/blackjackProject/fclass')
 
-import ast
 from classAction import Action
 from classCard import Card
 from ClassDeck import Deck
 
+
+#new hands dealt
 dealerCurrentHand = Action.dealerDeal()
 playerCurrentHand = Action.playerDeal()
-readCard = Card.PrintCard
 
-printHand = Deck.printHand
 
-print("Dealer has ",end=""), printHand(dealerCurrentHand)
-print("Player has: ",end=""), printHand(playerCurrentHand)
+# input array of class Card
+# output imagified cards for playspace
+printCards = Deck.printCards
+
+
+
+#TEST CASES
+
+print("Dealer has ",end=""), printCards(dealerCurrentHand)
+print("Player has: ",end=""), printCards(playerCurrentHand)
 

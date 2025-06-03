@@ -50,6 +50,6 @@ class Card:
             (card.cardSuit == "\u2665"),
             (card.cardSuit == "\u2666"),
             (card.cardSuit == "\u2663") ]):
-            print("Error in PrintCard.py at ", cf, ". \n Ending program") ; exit()
+            print("Error in ClassCard.py at ", cf, " \n Ending program") ; exit()
         else:
             return (card.cardFace + card.cardSuit)

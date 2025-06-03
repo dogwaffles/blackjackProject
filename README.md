@@ -23,6 +23,8 @@ and this is the place to push myself, not the workplace.
 > -I am planning to do cleanup, commenting, and refactoring today: I've realized that transforming  
 class Card in main.py is unneccessary, it can & should be done in class Card.
 > -"No functions in main" -Okay
+> -Looking good. I reorganized down to 3 class files. main is free of functions, yet functional. Junk code is removed.  
+Comments are up-to-date. Final push shouldn't be too much of a hassle (jinx)...
 
 
 # Project Overview:

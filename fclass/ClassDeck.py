@@ -5,24 +5,27 @@ class Deck:
     def __init__(deck, deckLength):
         deck.deckLength = deckLength
 
-
+    # number of decks - eventually will be user-defined
     global decks
     decks = 1
 
-
+    # input number of decks
+    # output number of cards (decks * 52)
     def deckNum(decks):
         return (decks * 52)
     
-    def printHand(hand):
-        currentHand = []
-        for card in hand:
-            cardIndex = hand.index(card)
-            currentHand.append(hand[cardIndex])
-        #I don't know why printCards needs to use Deck. here
-        #I made a small effort to fix it...
-        Deck.printCards(currentHand)
 
-    # DECKMAKE
+    # input array of class Card
+    # output array of string for playspace
+    def printCards(deck):
+        newDeck = []
+        for card in deck:
+            #PrintCard uses 2 Card attributes and stringifies them
+            cardPrint = card.PrintCard()
+            newDeck.append(cardPrint)
+        print(newDeck)
+
+
     # returns a full deck of 52 class Card
     def deckMake():
         # variables for function
@@ -34,6 +37,7 @@ class Deck:
                 newDeck.append(Card(cardVals[facesIndex], cardFaces[facesIndex], cardSuits[suitsIndex]))
         return newDeck
 
+    # used in deckMake() DO NOT DELETE
     global cardVals
     global cardFaces
     global cardSuits
@@ -43,12 +47,4 @@ class Deck:
     cardFaces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
     cardSuits = ["spades", "hearts", "diamonds", "clubs"]
 
-    #FIXME experimental, perhaps move to __str__ in class Card
-    def printCards(deck):
-        newDeck = []
-        for card in deck:
-            cardPrint = card.PrintCard()
-            newDeck.append(cardPrint)
-            # print(cardPrint)
-        print(newDeck)
 
