@@ -48,16 +48,25 @@ class Action:
             playerCards -= 1
         return (playerHand)
     
+    #PLAYERHANDVAL
+    #input a list of cards
+    #return a value based on card.cardVal as global #playerHandVal
+    #Aces have their value reduced to 1 if player is over 21
     global playerHandVal
     def calcPlayerVal(hand):
         playerHandVal = 0
+        #iterates through hand, adds cards to accumulator
         for card in hand:
             playerHandVal += card.cardVal
+        #checks if hand valuue is over 21
         if playerHandVal > 21:
+            #checks for aces (card.cardVal == 11)
             for card in hand:
+                #if any aces present (AND val > 21), subtract 10 ; return new hand value
                 if card.cardVal == 11:
                     playerHandVal -= 10
                     return playerHandVal
+        #else return hand value
         return playerHandVal
 
     
