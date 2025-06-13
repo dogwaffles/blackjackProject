@@ -55,7 +55,7 @@ class Card:
         # NOTE: this will change the card global, but that shouldn't matter
         return (card.cardFace + card.cardSuit)
 
-card1 = Card(3, "3", "diamonds")
-card2 = Card(4, "4", "spades")
-cards  = [card1, card2]
-print(Card.PrintCard(cards[1]))
+# card1 = Card(3, "3", "diamonds")
+# card2 = Card(4, "4", "spades")
+# cards  = [card1, card2]
+# print(Card.PrintCard(cards[1]))

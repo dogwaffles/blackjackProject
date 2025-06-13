@@ -15,10 +15,21 @@ class Deck:
         return (decks * 52)
     
 
-    #FIXME DEAPOSTROPHIZER
-    #removes apostrophes from output of string in array->PRINTCARD
-    #may require relocating. [thanks, drunk me!]
-    #maybe output as !array
+    def calcHandVal(hand):
+        handVal = 0
+        #iterates through hand, adds cards to accumulator
+        for card in hand:
+            handVal += card.cardVal
+        #checks if hand valuue is over 21
+        if handVal > 21:
+            #checks for aces (card.cardVal == 11)
+            for card in hand:
+                #if any aces present (AND val > 21), subtract 10 ; return new hand value
+                if card.cardVal == 11:
+                    handVal -= 10
+                    return handVal
+        #else return hand value
+        return handVal
 
     # input array of class Card
     # output array of string for playspace
@@ -48,7 +59,7 @@ class Deck:
     global cardFaces
     global cardSuits
     aceVal = 1 #placeHolder
-    cardVals = [aceVal,2,3,4,5,6,7,8,9,10,10,10,10]
+    cardVals = [11,2,3,4,5,6,7,8,9,10,10,10,10]
     cardFaces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
     cardSuits = ["spades", "hearts", "diamonds", "clubs"]
 

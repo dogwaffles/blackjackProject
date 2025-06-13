@@ -38,12 +38,7 @@ For example, I didn't get a betting system in place, or a difficulty session.\
 my code; unacceptable.
 > -I will do some cleanup before turning it in, but with how unstable codespace is,
 I'm not doing any more actual refactoring or coding on this project (even though I would like to).
-```
-        FIXME DEAPOSTROPHIZER
-        removes apostrophes from output of string in array->PRINTCARD
-        may require relocating. [thanks, drunk me!]
-        maybe output as !array
-```     
+ 
 
 
 # Project Overview:

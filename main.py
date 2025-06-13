@@ -10,21 +10,22 @@
 from classAction import Action
 from classCard import Card
 from classDeck import Deck
+from classHand import Hand
 
 
 #new hands dealt
-dealerCurrentHand = Action.dealerDeal()
-playerCurrentHand = Action.playerDeal()
+dealerCurrentHand = Hand.dealerDeal()
+playerCurrentHand = Hand.playerDeal()
 
 
 #makes code more readable, shows card faces in playspace
-printCards = Deck.printCards
+# printCards = Deck.printCards
 
-#show player cards
-print("Player has: ",end=""), printCards(playerCurrentHand)
+#show player 
+# print("Player has: ",end=""), printCards(playerCurrentHand)
 
 #shows single card
-printCard = Card.PrintCard
+# printCard = Card.PrintCard
 
 #show dealer card
 
@@ -67,8 +68,8 @@ Action.playerPlay(playerCurrentHand, dealerCurrentHand)
 #TEST CASES
 # input array of class Card
 # output imagified cards for playspace
-printCards = Deck.printCards
+# printCards = Deck.printCards
 
-print("Dealer has: ",end=""), printCards(dealerCurrentHand)
-print("Player has: ",end=""), printCards(playerCurrentHand)
+# print("Dealer has: ",end=""), printCards(dealerCurrentHand)
+# print("Player has: ",end=""), printCards(playerCurrentHand)
 
