@@ -1,7 +1,7 @@
 #thanks to geeksforgeeks.org
 #easy way to add seperate folder for imports
-import sys
-sys.path.insert(0, '/home/louis/Documents/programming/python/blackjackProject/fclass')
+# import sys
+# sys.path.insert(0, '/home/louis/Documents/programming/python/blackjackProject/fclass')
 
 #from .fclass import classAction
 #from .fclass import classDeck
