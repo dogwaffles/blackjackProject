@@ -52,8 +52,11 @@ class Card:
         # checks for validity of newSuit, exits otherwise
         Card.suitCheck(newSuit)
         # returns str data for playspace
-        # NOTE: this will change the card global, but that shouldn't matter
         return (card.cardFace + card.cardSuit)
+
+
+
+####TEST CODE####
 
 # card1 = Card(3, "3", "diamonds")
 # card2 = Card(4, "4", "spades")

@@ -6,8 +6,8 @@ class Deck:
         deck.deckLength = deckLength
 
     # number of decks - eventually will be user-defined
-    global decks
-    decks = 1
+    # global decks
+    # decks = 1
 
     # input number of decks
     # output number of cards (decks * 52)
@@ -17,14 +17,14 @@ class Deck:
 
     def calcHandVal(hand):
         handVal = 0
-        #iterates through hand, adds cards to accumulator
+        #iterates through hand, adds card.cardVal to accumulator
         for card in hand:
             handVal += card.cardVal
         #checks if hand valuue is over 21
         if handVal > 21:
             #checks for aces (card.cardVal == 11)
             for card in hand:
-                #if any aces present (AND val > 21), subtract 10 ; return new hand value
+                #if any aces present, subtract 10 ; return new hand value
                 if card.cardVal == 11:
                     handVal -= 10
                     return handVal
@@ -44,12 +44,12 @@ class Deck:
 
     # returns a full deck of 52 class Card
     def deckMake():
-        # variables for function
+        # list var for function
         newDeck = []
         # nested for loop, iterates through suits, faces,values
-        # appends each Card into newDeck
         for suitsIndex in range(len(cardSuits)):
             for facesIndex in range(len(cardFaces)):
+                #appends Card class object to newDeck for func return
                 newDeck.append(Card(cardVals[facesIndex], cardFaces[facesIndex], cardSuits[suitsIndex]))
         return newDeck
 
@@ -57,9 +57,15 @@ class Deck:
     global cardVals
     global cardFaces
     global cardSuits
-    aceVal = 1 #placeHolder
     cardVals = [11,2,3,4,5,6,7,8,9,10,10,10,10]
     cardFaces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
     cardSuits = ["spades", "hearts", "diamonds", "clubs"]
 
 
+####TEST CODE####
+
+# Deck.printCards(Deck.deckMake())
+
+# print(Deck.calcHandVal(Deck.deckMake()))
+
+# print(Deck.deckNum(2))

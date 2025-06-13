@@ -1,26 +1,18 @@
-#thanks to geeksforgeeks.org
-#easy way to add seperate folder for imports
-# import sys
-# sys.path.insert(0, '/home/louis/Documents/programming/python/blackjackProject/fclass')
-
-#from .fclass import classAction
-#from .fclass import classDeck
-#from .fclass import classCard
-
+#
 from classAction import Action
-from classCard import Card
-from classDeck import Deck
 from classHand import Hand
 
 
-#new hands dealt
+# new hands dealt
+# I seperate this into two functions to avoid having to return to
+#two variables simultaneously
 dealerCurrentHand = Hand.dealerDeal()
 playerCurrentHand = Hand.playerDeal()
 
 
 #makes code more readable, shows card faces in playspace
 # printCards = Deck.printCards
-
+# hasattr
 #show player 
 # print("Player has: ",end=""), printCards(playerCurrentHand)
 
@@ -33,7 +25,7 @@ playerCurrentHand = Hand.playerDeal()
 # Action.playerDraw(playerCurrentHand)
 # print("Player has: ",end=""), printCards(playerCurrentHand)
 
-
+# Starts the game
 Action.playerPlay(playerCurrentHand, dealerCurrentHand)
 
 #calculating hand values

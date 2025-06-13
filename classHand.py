@@ -1,4 +1,4 @@
-from classCard import Card
+# from classCard import Card
 from classDeck import Deck
 from random import shuffle
 
@@ -19,15 +19,16 @@ class Hand:
         return deckStack
     
 
-    #global is useful here so functions can modify variables
-
+    # global is useful here for exporting var dealerStack
     global dealerStack
-    #default option, meant to be modified
+    # makeDealerStack(1) uses a default option, meant to be modified
+    #to makeDealerStack(inputVar)
     dealerStack = makeDealerStack(1)
     shuffle(dealerStack)
 
     # initial deal for dealer (2 cards into dealerHand)
     # call to return dealerHand (fresh deal)
+    # used to set up game environment before initialization
     def dealerDeal():
         dealerHand = []
         dealerCards = 2
@@ -37,7 +38,7 @@ class Hand:
             dealerCards -= 1
         return (dealerHand)
     
-    # see below
+    # initial deal for player
     def playerDeal():
         playerCards = 2
         playerHand = []
@@ -46,3 +47,10 @@ class Hand:
             playerHand.append(newCard)
             playerCards -= 1
         return (playerHand)
+    
+    
+####TEST CODE####
+
+# Deck.printCards(dealerStack)
+# Deck.printCards(Hand.dealerDeal())
+# Deck.printCards(Hand.playerDeal())
