@@ -110,8 +110,8 @@ class Action:
 
     #PLAYERSTAND
     #ends player turn (moves to dealer turn)
-    def playerStand():
-        Action.dealerPlay()
+    def playerStand(playerHand, dealerHand):
+        Action.dealerPlay(playerHand, dealerHand)
 
     #PLAYERBUST
     #ends game with a loss
@@ -122,9 +122,9 @@ class Action:
     
     #PLAYERWIN
     #ends game with a win
-    def playerWin():
-        print("Your value was", Action.calcPlayerVal(playerCurrentHand))
-        print("The dealer had a value of", Action.calcDealerVal(dealerCurrentHand))
+    def playerWin(playerHand, dealerHand):
+        print("Your value was", Action.calcPlayerVal(playerHand))
+        print("The dealer had a value of", Action.calcDealerVal(dealerHand))
         print("You win!")
         #!!!
         exit()
@@ -141,11 +141,11 @@ class Action:
     def playerPlay(playerHand, dealerHand):
         print("You have: "), Deck.printCards(playerHand)
         if Action.calcPlayerVal(playerHand) > 21:
-            Action.playerBust(playerHand)
-        print("Dealer is showing: ['" +Card.printCard(dealerCurrentHand[0]) + "', '**']")
+            Action.playerBust(playerHand, dealerHand)
+        print("Dealer is showing: ['" +Card.PrintCard(dealerHand[0]) + "', '**']")
         play = input("Would you like to: \n (H)it? \n (S)tand?")
         if play == "S" or play == "stand":
-            Action.playerStand()
+            Action.playerStand(playerHand, dealerHand)
         if play == "H" or play == "hit":
             Action.playerDraw(playerHand)
             Action.playerPlay(playerHand, dealerHand)
@@ -156,28 +156,47 @@ class Action:
 
     #DEALERSTAND
     #ends dealer phase, moves to comparative phase #ENDPHASE
-    def dealerStand():
-        Action.endPhase()
+    def dealerStand(playerHand, dealerHand):
+        Action.endPhase(playerHand, dealerHand)
 
     #DEALERHIT
     #adds card to dealerHand from dealerStack
-    def dealerHit():
+    def dealerHit(playerHand, dealerHand):
         newCard = dealerStack.pop(0)
-        dealerCurrentHand.append(newCard)
+        dealerHand.append(newCard)
+        Action.dealerPlay(playerHand, dealerHand)
 
     #DEALERPLAY
     # input hand
     # output dealer hand value (or zero if bust)
-    def dealerPlay(hand):
+    def dealerPlay(playerHand, dealerHand):
+        print("Dealer has "), Deck.printCards(dealerHand), str(Action.calcDealerVal(dealerHand))
 
-        if Action.calcDealerVal(dealerCurrentHand) > 21:
-            Action.playerWin()
-        if Action.calcDealerVal(dealerCurrentHand) > 16:
-            Action.dealerStand()
-        if Action.calcDealerVal(dealerCurrentHand) > 0:
-            Action.dealerHit()
+        if Action.calcDealerVal(dealerHand) > 21:
+            Action.playerWin(playerHand, dealerHand)
+        if Action.calcDealerVal(dealerHand) > 16:
+            Action.dealerStand(playerHand, dealerHand)
+        if Action.calcDealerVal(dealerHand) > 0:
+            Action.dealerHit(playerHand, dealerHand)
         else:
             "Error in Action.dealerPlay, dealer value <= 0" ; exit()
+
+    #ENDPHASE
+    #input dealerHand and playerHand
+    #compares values of hands and determines
+    #winner or tie, with a message
+    #ends program
+    def endPhase(playerHand, dealerHand):
+        print("Dealer has: ", str(Action.calcDealerVal(dealerHand)))
+        print("Player has: ", str(Action.calcPlayerVal(playerHand)))
+        playerVal = Action.calcPlayerVal(playerHand)
+        dealerVal = Action.calcDealerVal(dealerHand)
+        if int(playerVal) == int(dealerVal):
+            print("It's a tie! Game over. \n"); exit()
+        if int(playerVal) > int(dealerVal):
+            print("You win! Game over. \n"); exit()
+        if int(playerVal) < int(dealerVal):
+            print("You lose! Game over. \n"); exit()
         
 
 #GAMEPLAY START ###

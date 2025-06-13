@@ -27,7 +27,7 @@ print("Player has: ",end=""), printCards(playerCurrentHand)
 printCard = Card.PrintCard
 
 #show dealer card
-print("Dealer has: ['" + printCard(dealerCurrentHand[0]) + "', '**']")
+
 
 # Action.playerDraw(playerCurrentHand)
 # print("Player has: ",end=""), printCards(playerCurrentHand)
