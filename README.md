@@ -27,7 +27,17 @@ class Card in main.py is unneccessary, it can & should be done in class Card.\
 Comments are up-to-date. Final push shouldn't be too much of a hassle (jinx)...
 
 # June 3:
-> -Was up overnight. I've gotten a lot done. I think I'll sit around and work on ideas for moving forward, today.\
+> -Was up overnight. I've gotten a lot done. I think I'll sit around and work on ideas for moving forward, today.
+
+# June 12
+> -I got a lot done early, and managed to get a working project done today. I didn't reach a lot of my goals.
+For example, I didn't get a betting system in place, or a difficulty session.\
+> -The thing is: I do my work on local, and pushing my work to github was a painful chore 
+(luckily I have a third-party app to help manage that, which involved resetting to an older push...)
+> -Also, Codespace ate fully half of my work, meaning I had to manually copy/paste
+my code; unacceptable.
+> -I will do some cleanup before turning it in, but with how unstable codespace is,
+I'm not doing any more actual refactoring or coding on this project (even though I would like to).
 ```
         FIXME DEAPOSTROPHIZER
         removes apostrophes from output of string in array->PRINTCARD
