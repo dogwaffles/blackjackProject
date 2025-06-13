@@ -1,5 +1,5 @@
-from classDeck import Deck
 from random import shuffle
+from classDeck import Deck
 
 # print(dealerStack[0])
 
