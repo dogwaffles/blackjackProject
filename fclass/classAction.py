@@ -1,4 +1,5 @@
 from classDeck import Deck
+from classCard import Card
 from random import shuffle
 
 # print(dealerStack[0])
@@ -47,8 +48,30 @@ class Action:
             playerCards -= 1
         return (playerHand)
     
+    global playerHandVal
+    def calcPlayerVal(hand):
+        playerHandVal = 0
+        for card in hand:
+            playerHandVal += card.cardVal
+        if playerHandVal > 21:
+            for card in hand:
+                if card.cardVal == 11:
+                    playerHandVal -= 10
+                    return playerHandVal
+        return playerHandVal
+
+    
 
 #GAMEPLAY START ###
+
+card3 = Card(5, "5", "hearts")
+card1 = Card(10, "3", "diamonds")
+card2 = Card(11, "4", "spades")
+cards  = [card1, card2, card3]
+
+print(Action.calcPlayerVal(cards))
+
+
 
     #STARTDEAL 
     # starts the game
@@ -56,7 +79,11 @@ class Action:
     # deals two cards each to player and dealer
     # saves hands as playerHand and dealerHand
     # dealerStack can be modified with input option numDecks
-    def startDeal():
-        dealerStack
-        dealerDeal()
+    # .Deal functions should be modified to return nothing and write 
+    #to global .Hand vars
+    # def startDeal():
+    #     dealerStack = Action.makeDealerStack(1)
+    #     shuffle(dealerStack)
+    #     Action.dealerDeal()
+    #     Action.playerDeal()
    
