@@ -46,4 +46,17 @@ class Action:
             playerHand.append(newCard)
             playerCards -= 1
         return (playerHand)
+    
+
+#GAMEPLAY START ###
+
+    #STARTDEAL 
+    # starts the game
+    # creates a dealer stack
+    # deals two cards each to player and dealer
+    # saves hands as playerHand and dealerHand
+    # dealerStack can be modified with input option numDecks
+    def startDeal():
+        dealerStack
+        dealerDeal()
    

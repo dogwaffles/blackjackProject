@@ -56,4 +56,6 @@ class Card:
         return (card.cardFace + card.cardSuit)
 
 card1 = Card(3, "3", "diamonds")
-print(Card.PrintCard(card1))
+card2 = Card(4, "4", "spades")
+cards  = [card1, card2]
+print(Card.PrintCard(cards[1]))
