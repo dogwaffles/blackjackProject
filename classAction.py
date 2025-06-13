@@ -1,6 +1,6 @@
 from classDeck import Deck
 from classCard import Card
-from classHand import Hand
+# from classHand import Hand
 from random import shuffle
 
 printCards = Deck.printCards

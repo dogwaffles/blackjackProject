@@ -54,7 +54,6 @@ class Deck:
         return newDeck
 
     # used in deckMake() DO NOT DELETE
-    global aceVal
     global cardVals
     global cardFaces
     global cardSuits
