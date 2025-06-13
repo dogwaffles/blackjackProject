@@ -141,7 +141,7 @@ class Action:
     def playerPlay(playerHand, dealerHand):
         print("You have: "), Deck.printCards(playerHand)
         if Action.calcPlayerVal(playerHand) > 21:
-            Action.playerBust(playerHand, dealerHand)
+            Action.playerBust(playerHand)
         print("Dealer is showing: ['" +Card.PrintCard(dealerHand[0]) + "', '**']")
         play = input("Would you like to: \n (H)it? \n (S)tand?")
         if play == "S" or play == "stand":
@@ -164,6 +164,7 @@ class Action:
     def dealerHit(playerHand, dealerHand):
         newCard = dealerStack.pop(0)
         dealerHand.append(newCard)
+        print("Dealer draws ", Card.PrintCard(newCard))
         Action.dealerPlay(playerHand, dealerHand)
 
     #DEALERPLAY
@@ -173,6 +174,7 @@ class Action:
         print("Dealer has "), Deck.printCards(dealerHand), str(Action.calcDealerVal(dealerHand))
 
         if Action.calcDealerVal(dealerHand) > 21:
+            print("Dealer busts!")
             Action.playerWin(playerHand, dealerHand)
         if Action.calcDealerVal(dealerHand) > 16:
             Action.dealerStand(playerHand, dealerHand)
