@@ -29,6 +29,20 @@ printCard = Card.PrintCard
 #show dealer card
 print("Dealer has: ['" + printCard(dealerCurrentHand[0]) + "', '**']")
 
+# Action.playerDraw(playerCurrentHand)
+# print("Player has: ",end=""), printCards(playerCurrentHand)
+
+
+Action.playerPlay(playerCurrentHand, dealerCurrentHand)
+
+#calculating hand values
+
+#player
+#CALCULATEPLAYERVAL
+
+#dealer
+#CALCULATEDEALERVAL
+
 
 
 ## MAIN GAME
